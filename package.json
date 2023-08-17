@@ -1,0 +1,30 @@
+{
+	"name": "base-apparel-coming-soon-page-solution",
+	"version": "1.0.0",
+	"description": "This is a basic html nodejs boilerplate",
+	"source": "src/index.html",
+	"scripts": {
+		"dev": "parcel",
+		"build": "parcel build --no-source-maps --no-content-hash --public-url ./ --dist-dir public",
+		"clean-public": "rimraf public",
+		"clean-parcel": "rimraf .parcel-cache dist",
+		"clean-git": "rimraf .git",
+		"end-project": "rimraf node_modules dist .parcel-cache"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"parcel": "^2.9.3",
+		"parcel-namer-custom": "^0.2.0",
+		"rimraf": "^5.0.1",
+		"sass": "^1.64.1"
+	},
+	"parcel-namer-custom": {
+		".css$": "assets/style/[name].[hash].[type]",
+		".js$": "assets/js/[name].[hash].[type]",
+		".ttf$": "assets/fonts/[name].[hash].[type]",
+		".svg$|.jpg$|.png$|.webp$|.webmanifest$": "assets/images/[name].[hash].[type]",
+		".pdf$": "assets/docs/[name].[hash].[type]"
+	},
+	"keywords": []
+}
