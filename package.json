@@ -1,7 +1,7 @@
 {
 	"name": "base-apparel-coming-soon-page-solution",
 	"version": "1.0.0",
-	"description": "This is a basic html nodejs boilerplate",
+	"description": "frontendmentor.io",
 	"source": "src/index.html",
 	"scripts": {
 		"dev": "parcel",
