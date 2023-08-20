@@ -102,10 +102,13 @@
 	}
 	.form {
 		&__input {
-			padding: 0.875rem 0.5rem 0.8125rem 2rem;
+			padding: 0.875rem 1rem 0.8125rem 2rem;
 		}
 		&__btn {
 			padding-inline: 2.875rem;
+		}
+		&__error-icon {
+			margin-right: 1rem;
 		}
 		&__error {
 			left: 2rem;
