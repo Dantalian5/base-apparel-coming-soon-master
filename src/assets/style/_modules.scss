@@ -1,0 +1,88 @@
+@use "variables" as var;
+
+.heading,
+.paragraph {
+	font-family: var.$ff-josefin;
+	text-align: center;
+	font-style: normal;
+}
+.heading {
+	color: #423a3a;
+	font-size: 2.5rem;
+	font-weight: 600;
+	line-height: 1.05; /* 105% */
+	letter-spacing: 0.67656rem;
+	text-transform: uppercase;
+	&--span {
+		color: #ce9898;
+		font-weight: 300;
+	}
+}
+.paragraph {
+	color: #ce9898;
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 1.57; /* 157.143% */
+	&--input {
+		color: #423a3a;
+		text-align: start;
+		line-height: 2; /* 200% */
+	}
+}
+.image {
+	max-width: 100%;
+	max-height: 100%;
+}
+.form {
+	width: 100%;
+	display: flex;
+
+	border-radius: 1.75rem;
+	border: 1px solid rgba($color: #ce9898, $alpha: 0.5);
+	&__input {
+		border-radius: inherit;
+		padding: 0.69rem 1rem 0.56rem 1.5rem;
+		flex-grow: 1;
+		background: none;
+		&::placeholder,
+		&:-ms-input-placeholder,
+		&::-ms-input-placeholder {
+			color: #ce9898;
+			opacity: 0.5;
+		}
+	}
+	&__btn {
+		border-radius: inherit;
+		padding-inline: 1.7rem;
+		display: flex;
+		align-items: center;
+		background: linear-gradient(135deg, #f8bfbf 0%, #ee8b8b 100%);
+		box-shadow: 0px 15px 20px 0px rgba(198, 110, 110, 0.25);
+	}
+}
+@media (min-width: 50rem) {
+	.heading,
+	.paragraph {
+		text-align: start;
+	}
+	.heading {
+		font-size: 4rem;
+		line-height: 1.1; /* 105% */
+		letter-spacing: 1.0826rem;
+	}
+	.paragraph {
+		font-size: 1rem;
+		line-height: 1.75; /* 157.143% */
+		&--input {
+			line-height: 1.75; /* 200% */
+		}
+	}
+	.form {
+		&__input {
+			padding: 0.9375rem 1rem 0.8125rem 2rem;
+		}
+		&__btn {
+			padding-inline: 2.875rem;
+		}
+	}
+}

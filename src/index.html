@@ -22,16 +22,77 @@
 		<link rel="stylesheet" href="assets/style/style.scss" />
 	</head>
 	<body>
-		We're coming soon Hello fellow shoppers! We're currently building our new
-		fashion store. Add your email below to stay up-to-date with announcements
-		and our launch deals. Email Address
+		<main class="container">
+			<div class="container__logo">
+				<img
+					class="image"
+					src="assets/images/logo.svg"
+					alt="Base Apparel logo"
+				/>
+			</div>
+			<div class="container__img">
+				<picture>
+					<source
+						media="(min-width: 50rem)"
+						srcset="assets/images/hero-desktop.jpg"
+					/>
+					<img
+						class="image"
+						src="assets/images/hero-mobile.jpg"
+						alt="a girl posing"
+					/>
+				</picture>
+			</div>
+			<div class="container__body">
+				<h1 class="container__title heading">
+					<span class="heading--span">We're</span> coming soon
+				</h1>
+				<p class="container__text paragraph">
+					Hello fellow shoppers! We're currently building our new fashion store.
+					Add your email below to stay up-to-date with announcements and our
+					launch deals.
+				</p>
+				<div class="container__form">
+					<form name="myForm" id="myForm" class="form">
+						<input
+							type="mail"
+							class="form__input paragraph paragraph--input"
+							id="formInput"
+							name="formInput"
+							aria-label="email input"
+							placeholder="Email Address"
+							pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+							required
+						/>
+						<button
+							type="submit"
+							class="form__btn"
+							id="formButton"
+							name="formButton"
+							title="submit"
+							aria-label="submit button"
+						>
+							<svg xmlns="http://www.w3.org/2000/svg" width="12" height="20">
+								<path
+									fill="none"
+									stroke="#FFF"
+									stroke-width="2"
+									d="M1 1l8.836 8.836L1 18.671"
+								/>
+							</svg>
+						</button>
+					</form>
+				</div>
+			</div>
+		</main>
 
 		<footer>
 			<p class="attribution">
 				Challenge by
 				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
 					>Frontend Mentor</a
-				>. Coded by <a href="#">Your Name Here</a>.
+				>. Coded by
+				<a href="https://marcosvalenzuela.netlify.com">Marcos Valenzuela</a>.
 			</p>
 		</footer>
 		<!-- add javascript file -->
