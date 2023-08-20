@@ -38,6 +38,9 @@
 }
 @media (min-width: 50rem) {
 	.container {
+		background: url(../images/bg-pattern-desktop.svg) no-repeat,
+			linear-gradient(150deg, #fff 0%, #fff4f4 100%);
+		background-size: calc(54.5% + 2.5rem) 100%;
 		&__img {
 			position: absolute;
 			inset: 0 0 0 calc(54.5% + 2.5rem);

@@ -1,7 +1,8 @@
 @use "variables" as var;
 
 .heading,
-.paragraph {
+.paragraph,
+.error-text {
 	font-family: var.$ff-josefin;
 	text-align: center;
 	font-style: normal;
@@ -29,6 +30,12 @@
 		line-height: 2; /* 200% */
 	}
 }
+.error-text {
+	color: #f96464;
+	font-size: 0.8125rem;
+	font-weight: 400;
+	line-height: 1.2;
+}
 .image {
 	max-width: 100%;
 	max-height: 100%;
@@ -36,9 +43,9 @@
 .form {
 	width: 100%;
 	display: flex;
-
 	border-radius: 1.75rem;
 	border: 1px solid rgba($color: #ce9898, $alpha: 0.5);
+	position: relative;
 	&__input {
 		border-radius: inherit;
 		padding: 0.69rem 1rem 0.56rem 1.5rem;
@@ -58,6 +65,22 @@
 		align-items: center;
 		background: linear-gradient(135deg, #f8bfbf 0%, #ee8b8b 100%);
 		box-shadow: 0px 15px 20px 0px rgba(198, 110, 110, 0.25);
+		position: relative;
+		&.error::after {
+			content: url(../images/icon-error.svg);
+			width: 1.5rem;
+			height: 1.5rem;
+			position: absolute;
+			top: 50%;
+			left: -0.5rem;
+			transform: translate(-100%, -50%);
+			pointer-events: none;
+		}
+	}
+	&__error {
+		position: absolute;
+		left: 1.5rem;
+		top: calc(100% + 0.5rem);
 	}
 }
 @media (min-width: 50rem) {
@@ -79,10 +102,13 @@
 	}
 	.form {
 		&__input {
-			padding: 0.9375rem 1rem 0.8125rem 2rem;
+			padding: 0.875rem 1rem 0.8125rem 2rem;
 		}
 		&__btn {
 			padding-inline: 2.875rem;
+		}
+		&__error {
+			left: 2rem;
 		}
 	}
 }
